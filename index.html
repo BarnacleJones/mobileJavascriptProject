@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Apps</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+    </style> 
+    <script type="text/javascript" src="javascript.js"></script>
+</head>
+<body class = "main">
+
+
+    <!--Grid 1 - News App-->
+    <div class = "grid1">
+        <iframe src="https://www.metservice.com/towns-cities/locations/tauranga" frameborder="0" id=metFrame></iframe>
+        <iframe src="https://www.marineweather.co.nz/forecasts/tay-st" frameborder="0" id=marineFrame></iframe>
+        <iframe src="https://www.surf2surf.com/reports/mount-coast" frameborder="0" id=surfFrame></iframe>       
+        <button class="met" onclick="metShow()">Metservice Tauranga</button>
+        <button class="surf" onclick="marineShow()">Marine Weather Tay Street</button>
+        <button class="marine" onclick="surfShow()">Surf2Surf Tay Street</button>
+        <div class="background"></div>
+    </div>
+
+    <!--Grid 2 - Music App-->
+    <div class="grid2">
+        <div class="polyImg"></div>
+        <div class="vinylColour"></div>
+        <div class="vinyl"></div>
+        <button class="button1" onclick="playMusic('track1')">1-Crumbling Castle</button>  
+        <button class="button2" onclick="playMusic('track2')">2-Polygondwanaland</button>
+        <button class="button3" onclick="playMusic('track3')">3-The Castle in the Air</button>
+        <button class="button4" onclick="playMusic('track4')">4-Deserted Dunes Welcome Weary Feet</button>
+        <button class="button5" onclick="playMusic('track5')">5-Inner Cell</button>
+        <button class="button6" onclick="playMusic('track6')">6-Loyalty</button>
+        <button class="button7" onclick="playMusic('track7')">7-Horology</button>
+        <button class="button8" onclick="playMusic('track8')">8-Tetrachromacy</button>
+        <button class="button9" onclick="playMusic('track9')">9-Searching</button>  
+        <button class="button10"onclick="playMusic('track10')">10-The Fourth Colour</button>
+        <button id="button11" onclick="stopMusic()">Pause</button>
+        <button id="button12" onclick="startMusic()">Resume</button>
+    </div>
+
+    <!--Grid 3 - Password Generator App-->
+
+    <div class="grid3">
+        <div class="introText">
+        <h1>Password Generator</h1>
+        <h3>Select your requirements and push the "Generate!" button</h3>
+        </div>
+        
+        <form action="" class="grid3Form">
+            <!-- Number input box -->
+            <div class="input">
+                <br>
+                <label for="characters">Number of Characters</label>
+                <input type="text" id="characters" characterNum="characters" value="">
+                <br><br><br>
+                <!-- Special Character checkbox -->
+                <input type="checkbox" id="specialCharacters" name="specialCharacters" value="">
+                <br>
+                <label for="specialCharacters"> Special Characters (!+-.-_~{}[]():?#$/\%@)</label>
+                <br><br>
+                <!-- Numbers checkbox -->
+                <input type="checkbox" id="numbers" name="numbers" value="">
+                <br>
+                <label for="numbers"> Numbers (0-9)</label>
+                <br><br><br>
+            </div>
+            <div class="submit">
+                <!-- Generate button -->
+                <input type="submit" value="Generate!">
+            </div><br><br><br><br><br>
+            <div class="generated">
+                <!-- Generated password output -->
+                <output name="generatedPassword" id="generatedPassword" for="characters specialCharacters numbers">Generated Password</output>
+            </div>
+        </form>        
+    </div>
+
+    <div class="hiddenAudio">
+        <audio src="audio/1. Crumbling Castle.mp3" id="track1" class="music"></audio>
+        <audio src="audio/2. Polygondwanaland.mp3" id="track2" class="music"></audio>
+        <audio src="audio/3. The Castle In The Air.mp3" id="track3" class="music"></audio>
+        <audio src="audio/4. Deserted Dunes Welcome Weary Feet.mp3" id="track4" class="music"></audio>
+        <audio src="audio/5. Inner Cell.mp3" id="track5" class="music"></audio>
+        <audio src="audio/6. Loyalty.mp3" id="track6" class="music"></audio>
+        <audio src="audio/7. Horology.mp3" id="track7" class="music"></audio>
+        <audio src="audio/8. Tetrachromacy.mp3" id="track8" class="music"></audio>
+        <audio src="audio/9. Searching....mp3" id="track9" class="music"></audio>
+        <audio src="audio/10. The Fourth Colour.mp3" id="track10" class="music"></audio>
+    </div>
+</body>
+</html>

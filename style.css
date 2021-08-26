@@ -1,0 +1,207 @@
+
+
+body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    
+    /* justify-content: left; centers items on the line (the x-axis by default)
+    align-items: left; centers items on the cross-axis (y by default) */
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    }
+
+/*Set up the three grid areas*/
+/*Grid 1 News viewing window*/
+
+.grid1{
+    height: 667px;
+    width: 375px;
+    border: 1px solid white;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) ;
+    grid-template-rows: 13fr 1fr 1fr 1fr;
+    background: url(images/surfBackground.jpg);
+    background-size:cover;
+}
+
+#metFrame, #surfFrame, #marineFrame{
+    background-color: lightgray;
+    grid-area: 1 / 1 / span 1 / span 6;
+    height:100%;
+    width: 100%;
+    display:none;
+}
+/*Move and style butttons*/
+
+.met{
+grid-area: 2 / 2 / span 1 / span 3;
+opacity: .8;
+
+}
+.surf{
+    grid-area: 3 / 2 / span 1 / span 3;
+    opacity: .8;
+}
+.marine{
+    grid-area: 4 / 2 / span 1 / span 3;
+    opacity: .8;
+}
+.grid1 button:hover{
+    opacity: 1;
+}
+.grid1 button{
+    height:50%;
+    margin-top: 5%;
+    background-color: lightslategrey;
+    border-style: none;
+    
+}
+/*Grid 2 - polygondwanaland*/
+
+.grid2{
+    height: 667px;
+    width: 375px;
+    border: 1px solid white;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 5fr  1fr 1fr 1fr 1fr 1fr;
+    font-size: small;
+    
+}
+.polyImg{
+    grid-area: 1 / 1 / span 1 / span 6;
+    background-image: url(images/poly.PNG);
+    background-size: cover;
+    
+    
+}
+  /*Code from the web to make vinyl rotate*/
+  /*https://stackoverflow.com/questions/10123700/how-to-make-a-picture-rotate-continuously*/
+
+  @keyframes rotate{
+    from {
+        transform: rotate(0deg);
+      }
+      to { 
+        transform: rotate(360deg);
+      }
+}
+.vinyl{
+
+    background-image: url(images/polyVinyl.png);
+        grid-area: 2 / 1 / span 6 / span 6;
+    /* z-index: -1; */
+    background-position:center;
+    background-size: contain;
+    background-repeat:no-repeat;
+
+    /*Code from the web to make it rotate*/
+    animation-name: rotate; 
+    animation-duration: 5s; 
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    
+    
+}
+.vinylColour{
+    grid-area: 2 / 1 / span 6 / span 6;
+    background-color: black;
+    z-index: -1;
+}
+/*Button styling - grid 2*/
+
+.grid2 button{
+    opacity: .9;
+    height: 75%;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: firebrick;
+    border-style: none;
+
+}
+.grid2 button:hover{
+    opacity: 95;
+    z-index: 2;
+    background-color: rgb(204, 204, 21);
+}
+.button1{
+    grid-area: 2 / 1 / span 1 / span 1;
+}
+.button2{
+    grid-area: 3 / 1 / span 1 / span 1;
+}
+.button3{
+    grid-area: 4 / 1 / span 1 / span 1;
+}
+.button4{
+    grid-area: 5 / 1 / span 1 / span 1;
+}
+.button5{
+    grid-area: 6 / 1 / span 1 / span 1;
+}
+.button6{
+    grid-area: 2 / 5 / span 1 / span 1;
+}
+.button7{
+    grid-area: 3 / 5 / span 1 / span 1;
+}
+.button8{
+    grid-area: 4 / 5 / span 1 / span 1;
+}
+.button9{
+    grid-area: 5 / 5 / span 1 / span 1;
+}
+.button10{
+    grid-area: 6 / 5 / span 1 / span 1;
+}
+
+#button11{
+    grid-area: 2 / 2 / span 1 / span 2;
+    height: 25%;
+    width:75%;
+    margin-left: 2%;
+}
+
+#button12{
+    grid-area: 2 / 4 / span 1 / span 1;
+    height: 25%;
+    width:100%;
+    /* padding-top: 50%; */
+   }
+
+/*Audio on page - hiding*/
+
+.hiddenAudio{
+    display: none;
+}
+
+/*Grid 3 - Password Generator*/
+
+.grid3{
+    height: 667px;
+    width: 375px;
+    border: 1px solid white;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 2fr, 5fr;
+    background-image: url(images/passwordBackground.jpg);
+    background-size:cover;
+    background-position: bottom;
+    color: rgb(89, 144, 247);
+    font-family: 'Space Mono', monospace;
+}
+ .introText{
+    text-align: center;
+}
+.input{
+    text-align: center;
+}
+.submit{
+    text-align: center;
+}
+.generated{
+    text-align: center;
+}
