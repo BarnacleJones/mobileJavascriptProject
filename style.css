@@ -205,3 +205,11 @@ opacity: .8;
 .generated{
     text-align: center;
 }
+
+/* lets make it mobile friendly */
+
+@media only screen and (max-width : 800px){
+body{
+    flex-direction: column;
+}
+}
