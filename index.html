@@ -55,10 +55,10 @@
         <form action="" class="grid3Form">
             <!-- Number input box -->
             <div class="input">
-                <br>
+                
                 <label for="characters">Number of Characters</label>
                 <input type="text" id="characters" characterNum="characters" value="">
-                <br><br><br>
+                <br><br>
                 <!-- Special Character checkbox -->
                 <input type="checkbox" id="specialCharacters" name="specialCharacters" value="">
                 <br>
@@ -68,12 +68,17 @@
                 <input type="checkbox" id="numbers" name="numbers" value="">
                 <br>
                 <label for="numbers"> Numbers (0-9)</label>
+                <br><br>
+                <!-- Letters checkbox -->
+                <input type="checkbox" id="letters" name="letters" value="">
+                <br>
+                <label for="letters"> Letters (A-Z)</label>
                 <br><br><br>
             </div>
             <div class="submit">
                 <!-- Generate button -->
                 <button onclick="generate()" type="button">Submit</button> 
-            </div><br><br><br><br><br>
+            </div><br><br>
             <div class="generated">
                 <!-- Generated password output -->
                 <output name="generatedPassword" id="generatedPassword" for="characters specialCharacters numbers">Generated Password</output>
